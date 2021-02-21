@@ -8,10 +8,10 @@ export class AppController {
 
   @Get()
   @ApiQuery({
-    name: 'contentType',
+    name: 'pagingStrategy',
     type: 'enum',
     required: false,
-    enum: ['Serial'],
+    enum: ['withCount', 'noCount'],
   })
   getHello(): string {
     return this.appService.getHello();
